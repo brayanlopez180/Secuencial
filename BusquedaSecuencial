@@ -1,0 +1,31 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main(){
+	int a[] = {1,4,2,3,5};
+	int i,dato;
+	char bandera = 'f';
+	
+	dato = 4; 
+	i=0;
+	
+	while((bandera == 'f') && (i<5)){
+		if(a[i] == dato){
+			bandera = 'v';
+		}
+		i++;
+	}
+	
+	if(bandera == 'f'){
+		cout<<"El numero a buscar no fue encontrado en el arreglo"<<endl;
+	}
+	else if(bandera == 'v'){
+		cout<<"El numero a sido encontrado en el arreglo: "<<i-1<<endl;
+	}
+	
+	
+	getch();
+	return 0;
+}
